@@ -18,6 +18,8 @@ import tools.jackson.databind.node.ObjectNode;
  */
 public final class EdgeCases {
 
+    private static final String ROW = "%-30s | %-34s | %s%n";
+
     record Case(String name, String json, Function<JsonValue, Object> jdk, Function<JsonNode, Object> jackson) {}
 
     public static void main(String[] args) {
@@ -68,12 +70,23 @@ public final class EdgeCases {
                         v -> "parsed", n -> "parsed"));
 
         System.out.println("== parsing, default settings ==");
-        System.out.printf("%-30s | %-34s | %s%n", "case", "JDK 28 jdk.incubator.json", "Jackson 3 tree");
+        System.out.printf(ROW, "case", "JDK 28 jdk.incubator.json", "Jackson 3 tree");
         for (Case c : cases) {
-            System.out.printf("%-30s | %-34s | %s%n", c.name(),
+            System.out.printf(ROW, c.name(),
                     outcome(() -> c.jdk().apply(Json.parse(c.json()))),
                     outcome(() -> c.jackson().apply(JacksonTreeTasks.MAPPER.readTree(c.json()))));
         }
+
+        // the table above uses Jackson's as*() accessors; their *Value() pairs differ per type
+        System.out.println();
+        System.out.println("== Jackson 3 tree: as*() vs *Value() accessors ==");
+        System.out.printf(ROW, "case", "as*()", "*Value()");
+        accessors("1.5: asInt / intValue", "{\"n\":1.5}", JsonNode::asInt, JsonNode::intValue);
+        accessors("\"42\": asInt / intValue", "{\"n\":\"42\"}", JsonNode::asInt, JsonNode::intValue);
+        accessors("3000000000: asInt / intValue", "{\"n\":3000000000}", JsonNode::asInt, JsonNode::intValue);
+        accessors("missing: asInt / intValue", "{}", JsonNode::asInt, JsonNode::intValue);
+        accessors("null: asString / stringValue", "{\"n\":null}", JsonNode::asString, JsonNode::stringValue);
+        accessors("1e400: asDouble / doubleValue", "{\"n\":1e400}", JsonNode::asDouble, JsonNode::doubleValue);
 
         System.out.println();
         System.out.println("== writing ==");
@@ -95,6 +108,18 @@ public final class EdgeCases {
         JsonValue parsed = Json.parse("{\"b\":1,\"a\":2}");
         System.out.println("JDK     parse then toString keeps order: " + parsed);
         System.out.println("JDK     asMap() type: " + simpleType(parsed.asMap()));
+    }
+
+    // every input keeps the value under "n"; strings are quoted so that "" and null look different
+    private static void accessors(String name, String json,
+                                  Function<JsonNode, Object> asAccessor, Function<JsonNode, Object> valueAccessor) {
+        System.out.printf(ROW, name,
+                outcome(() -> quoted(asAccessor.apply(JacksonTreeTasks.MAPPER.readTree(json).path("n")))),
+                outcome(() -> quoted(valueAccessor.apply(JacksonTreeTasks.MAPPER.readTree(json).path("n")))));
+    }
+
+    private static Object quoted(Object value) {
+        return value instanceof String s ? "\"" + s + "\"" : value;
     }
 
     private static String nested(int depth) {

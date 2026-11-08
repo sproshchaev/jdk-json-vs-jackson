@@ -92,6 +92,16 @@ export JAVA_HOME=/path/to/jdk-28 PATH="$JAVA_HOME/bin:$PATH"
 Комментарии, запятую в конце, одинарные кавычки, `NaN`, ведущий ноль, BOM и второй документ
 после первого оба парсера по умолчанию отвергают.
 
+В колонке Jackson стоят методы `asInt()`, `asString()`, `asDouble()`. У дерева Jackson 3
+есть их пары `intValue()`, `stringValue()`, `doubleValue()`, и ведут они себя иначе
+(раздел `as*() vs *Value()` в `expected.txt`):
+
+| Вход | `as*()` | `*Value()` |
+|---|---|---|
+| `1.5`, `"42"`, отсутствующее поле как `int` | `1`, `42`, `0` | ошибка |
+| `null` как строка | `""` | `null` |
+| `1e400` как `double` | `Infinity` | `Infinity` |
+
 ### Скорость и память
 
 Apple M2 Pro, macOS 26.6, JDK 28-ea+23, Jackson 3.3.0, JMH 1.37, один форк,

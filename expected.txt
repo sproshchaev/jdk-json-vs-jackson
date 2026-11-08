@@ -43,6 +43,15 @@ lone surrogate \ud800          | OK 1                               | OK 1
 nesting depth 2000             | OK parsed                          | ERR StreamConstraintsException
 nesting depth 100000           | OK parsed                          | ERR StreamConstraintsException
 
+== Jackson 3 tree: as*() vs *Value() accessors ==
+case                           | as*()                              | *Value()
+1.5: asInt / intValue          | OK 1                               | ERR JsonNodeException
+"42": asInt / intValue         | OK 42                              | ERR JsonNodeException
+3000000000: asInt / intValue   | ERR JsonNodeException              | ERR JsonNodeException
+missing: asInt / intValue      | OK 0                               | ERR JsonNodeException
+null: asString / stringValue   | OK ""                              | OK null
+1e400: asDouble / doubleValue  | OK Infinity                        | OK Infinity
+
 == writing ==
 JDK     string: "quote \" slash / newline \n tag </script> u2028   emoji 😀"
 Jackson string: "quote \" slash / newline \n tag </script> u2028   emoji 😀"
