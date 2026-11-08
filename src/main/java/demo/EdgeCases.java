@@ -113,7 +113,7 @@ public final class EdgeCases {
     private static String outcome(java.util.function.Supplier<Object> probe) {
         try {
             return "OK " + probe.get();
-        } catch (Throwable t) {
+        } catch (RuntimeException | StackOverflowError t) {
             return "ERR " + t.getClass().getSimpleName();
         }
     }

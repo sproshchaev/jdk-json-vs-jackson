@@ -38,7 +38,7 @@ public final class JacksonTreeTasks implements JsonTasks {
     }
 
     @Override
-    public long threadsWaitingOnMonitor(String threadDump) {
+    public long threadsWithWaitingOn(String threadDump) {
         return threads(threadDump)
                 .filter(t -> t.has("waitingOn"))
                 .count();

@@ -41,7 +41,7 @@ public final class JdkTasks implements JsonTasks {
     }
 
     @Override
-    public long threadsWaitingOnMonitor(String threadDump) {
+    public long threadsWithWaitingOn(String threadDump) {
         return threads(threadDump)
                 .filter(t -> t.tryGet("waitingOn").isPresent())
                 .count();

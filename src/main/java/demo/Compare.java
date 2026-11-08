@@ -30,7 +30,7 @@ public final class Compare {
         tasks.put("averageTemperature", t -> String.format(Locale.ROOT, "%.4f", t.averageTemperature(forecast)));
         tasks.put("unknownPrecipitation", t -> String.valueOf(t.unknownPrecipitation(forecast)));
         tasks.put("threadsByState", t -> String.valueOf(t.threadsByState(dump)));
-        tasks.put("threadsWaitingOnMonitor", t -> String.valueOf(t.threadsWaitingOnMonitor(dump)));
+        tasks.put("threadsWithWaitingOn", t -> String.valueOf(t.threadsWithWaitingOn(dump)));
         tasks.put("rootContainers", t -> String.valueOf(t.rootContainers(dump)));
         tasks.put("providersConfig", t -> t.providersConfig(providers));
 

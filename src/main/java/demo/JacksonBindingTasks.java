@@ -9,7 +9,6 @@ import java.util.Objects;
 import java.util.TreeMap;
 import java.util.stream.Stream;
 
-import tools.jackson.databind.DeserializationFeature;
 import tools.jackson.databind.json.JsonMapper;
 
 /**
@@ -18,9 +17,8 @@ import tools.jackson.databind.json.JsonMapper;
  */
 public final class JacksonBindingTasks implements JsonTasks {
 
-    static final JsonMapper MAPPER = JsonMapper.builder()
-            .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
-            .build();
+    // Jackson 3 ignores unknown properties by default (FAIL_ON_UNKNOWN_PROPERTIES is off)
+    static final JsonMapper MAPPER = JsonMapper.builder().build();
 
     record Forecast(Properties properties) {}
     record Properties(List<Period> periods) {}
@@ -49,7 +47,7 @@ public final class JacksonBindingTasks implements JsonTasks {
     }
 
     @Override
-    public long threadsWaitingOnMonitor(String threadDump) {
+    public long threadsWithWaitingOn(String threadDump) {
         // a record cannot tell an absent member from "waitingOn": null
         return threads(threadDump).map(JThread::waitingOn).filter(Objects::nonNull).count();
     }

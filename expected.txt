@@ -7,9 +7,9 @@ unknownPrecipitation     jackson-binding  3
 threadsByState           jdk              {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
 threadsByState           jackson-tree     {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
 threadsByState           jackson-binding  {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
-threadsWaitingOnMonitor  jdk              68
-threadsWaitingOnMonitor  jackson-tree     68
-threadsWaitingOnMonitor  jackson-binding  68
+threadsWithWaitingOn     jdk              68
+threadsWithWaitingOn     jackson-tree     68
+threadsWithWaitingOn     jackson-binding  68
 rootContainers           jdk              1
 rootContainers           jackson-tree     1
 rootContainers           jackson-binding  1
