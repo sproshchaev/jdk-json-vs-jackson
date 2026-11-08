@@ -1,0 +1,20 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: oracle-actions/setup-java@v1.5.0
+        with:
+          website: jdk.java.net
+          release: 28
+      - name: JDK and Maven versions
+        run: java -version && mvn -v
+      - name: Data, behaviour against expected.txt, smoke run of measurements
+        run: ./run.sh ci

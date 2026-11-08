@@ -1,0 +1,163 @@
+{
+  "type": "Feature",
+  "properties": {
+    "units": "us",
+    "generatedAt": "2026-11-08T06:00:00+00:00",
+    "periods": [
+      {
+        "number": 1,
+        "name": "Today",
+        "startTime": "2026-11-08T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 55,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": null,
+        "windSpeed": "13 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 2,
+        "name": "Tonight",
+        "startTime": "2026-11-08T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 43,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": null,
+        "windSpeed": "10 mph",
+        "shortForecast": "Mostly Cloudy"
+      },
+      {
+        "number": 3,
+        "name": "Monday",
+        "startTime": "2026-11-09T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 55,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 90,
+        "windSpeed": "8 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 4,
+        "name": "Monday Night",
+        "startTime": "2026-11-09T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 37,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 60,
+        "windSpeed": "7 mph",
+        "shortForecast": "Mostly Cloudy"
+      },
+      {
+        "number": 5,
+        "name": "Tuesday",
+        "startTime": "2026-11-10T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 61,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 60,
+        "windSpeed": "5 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 6,
+        "name": "Tuesday Night",
+        "startTime": "2026-11-10T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 42,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 0,
+        "windSpeed": "8 mph",
+        "shortForecast": "Mostly Cloudy"
+      },
+      {
+        "number": 7,
+        "name": "Wednesday",
+        "startTime": "2026-11-11T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 61,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": null,
+        "windSpeed": "8 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 8,
+        "name": "Wednesday Night",
+        "startTime": "2026-11-11T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 44,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 80,
+        "windSpeed": "12 mph",
+        "shortForecast": "Mostly Cloudy"
+      },
+      {
+        "number": 9,
+        "name": "Thursday",
+        "startTime": "2026-11-12T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 56,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 60,
+        "windSpeed": "5 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 10,
+        "name": "Thursday Night",
+        "startTime": "2026-11-12T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 40,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 70,
+        "windSpeed": "7 mph",
+        "shortForecast": "Mostly Cloudy"
+      },
+      {
+        "number": 11,
+        "name": "Friday",
+        "startTime": "2026-11-13T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 63,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 40,
+        "windSpeed": "14 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 12,
+        "name": "Friday Night",
+        "startTime": "2026-11-13T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 36,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 70,
+        "windSpeed": "10 mph",
+        "shortForecast": "Mostly Cloudy"
+      },
+      {
+        "number": 13,
+        "name": "Saturday",
+        "startTime": "2026-11-14T06:00:00-05:00",
+        "isDaytime": true,
+        "temperature": 59,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 50,
+        "windSpeed": "12 mph",
+        "shortForecast": "Partly Sunny"
+      },
+      {
+        "number": 14,
+        "name": "Saturday Night",
+        "startTime": "2026-11-14T18:00:00-05:00",
+        "isDaytime": false,
+        "temperature": 42,
+        "temperatureUnit": "F",
+        "probabilityOfPrecipitation": 0,
+        "windSpeed": "13 mph",
+        "shortForecast": "Mostly Cloudy"
+      }
+    ]
+  }
+}

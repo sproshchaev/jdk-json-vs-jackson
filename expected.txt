@@ -1,0 +1,52 @@
+averageTemperature       jdk              49.5714
+averageTemperature       jackson-tree     49.5714
+averageTemperature       jackson-binding  49.5714
+unknownPrecipitation     jdk              3
+unknownPrecipitation     jackson-tree     3
+unknownPrecipitation     jackson-binding  3
+threadsByState           jdk              {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
+threadsByState           jackson-tree     {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
+threadsByState           jackson-binding  {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
+threadsWaitingOnMonitor  jdk              68
+threadsWaitingOnMonitor  jackson-tree     68
+threadsWaitingOnMonitor  jackson-binding  68
+rootContainers           jdk              1
+rootContainers           jackson-tree     1
+rootContainers           jackson-binding  1
+providersConfig          jdk              {"providers":["SUN","SunRsaSign","SunEC"],"count":3,"enabled":true}
+providersConfig          jackson-tree     {"providers":["SUN","SunRsaSign","SunEC"],"count":3,"enabled":true}
+providersConfig          jackson-binding  {"providers":["SUN","SunRsaSign","SunEC"],"count":3,"enabled":true}
+all implementations agree
+
+== parsing, default settings ==
+case                           | JDK 28 jdk.incubator.json          | Jackson 3 tree
+duplicate key                  | ERR JsonParseException             | OK 2
+trailing comma                 | ERR JsonParseException             | ERR StreamReadException
+comment                        | ERR JsonParseException             | ERR StreamReadException
+single quotes                  | ERR JsonParseException             | ERR StreamReadException
+NaN                            | ERR JsonParseException             | ERR StreamReadException
+leading zero                   | ERR JsonParseException             | ERR StreamReadException
+BOM before document            | ERR JsonParseException             | ERR StreamReadException
+second document after first    | ERR JsonParseException             | ERR MismatchedInputException
+scalar at root                 | OK 42                              | OK 42
+2^64 read as long              | ERR JsonValueException             | ERR JsonNodeException
+2^64 written back              | OK 18446744073709551616            | OK 18446744073709551616
+3000000000 read as int         | ERR JsonValueException             | ERR JsonNodeException
+1.5 read as int                | ERR JsonValueException             | OK 1
+"42" read as int               | ERR JsonValueException             | OK 42
+long fraction written back     | OK 0.1000000000000000055511151231257827 | OK 0.1
+1e400 read as double           | ERR JsonValueException             | OK Infinity
+missing member as int          | ERR JsonValueException             | OK 0
+null read as string            | ERR JsonValueException             | OK 
+lone surrogate \ud800          | OK 1                               | OK 1
+2000-digit number as double    | ERR JsonValueException             | ERR StreamConstraintsException
+nesting depth 2000             | OK parsed                          | ERR StreamConstraintsException
+nesting depth 100000           | OK parsed                          | ERR StreamConstraintsException
+
+== writing ==
+JDK     string: "quote \" slash / newline \n tag </script> u2028   emoji 😀"
+Jackson string: "quote \" slash / newline \n tag </script> u2028   emoji 😀"
+JDK     key order from LinkedHashMap: {"zeta":"zeta","alpha":"alpha","mid":"mid"}
+Jackson key order from put():         {"zeta":"zeta","alpha":"alpha","mid":"mid"}
+JDK     parse then toString keeps order: {"b":1,"a":2}
+JDK     asMap() type: unmodifiable

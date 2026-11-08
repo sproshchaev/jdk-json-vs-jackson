@@ -1,0 +1,2442 @@
+{
+  "threadDump": {
+    "formatVersion": 2,
+    "processId": 45178,
+    "time": "2026-11-08T06:00:00.000000Z",
+    "runtimeVersion": "28-ea",
+    "threadContainers": [
+      {
+        "container": "<root>",
+        "parent": null,
+        "owner": null,
+        "threads": [
+          {
+            "tid": 1,
+            "time": "2026-11-08T06:00:00.392763Z",
+            "name": "main",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@c45c028",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 2,
+            "time": "2026-11-08T06:00:00.067502Z",
+            "name": "pool-0-thread-1",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 3,
+            "time": "2026-11-08T06:00:00.327863Z",
+            "name": "pool-0-thread-2",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 4,
+            "time": "2026-11-08T06:00:00.510756Z",
+            "name": "pool-0-thread-3",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 5,
+            "time": "2026-11-08T06:00:00.362379Z",
+            "name": "pool-0-thread-4",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@922fb35e",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 6,
+            "time": "2026-11-08T06:00:00.470157Z",
+            "name": "pool-0-thread-5",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 7,
+            "time": "2026-11-08T06:00:00.204059Z",
+            "name": "pool-0-thread-6",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@887336a7",
+            "stack": [
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 8,
+            "time": "2026-11-08T06:00:00.183775Z",
+            "name": "pool-0-thread-7",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 9,
+            "time": "2026-11-08T06:00:00.582460Z",
+            "name": "pool-0-thread-8",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 10,
+            "time": "2026-11-08T06:00:00.877696Z",
+            "name": "pool-0-thread-9",
+            "state": "WAITING",
+            "stack": [
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 11,
+            "time": "2026-11-08T06:00:00.029870Z",
+            "name": "pool-0-thread-10",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 12,
+            "time": "2026-11-08T06:00:00.207597Z",
+            "name": "pool-0-thread-11",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 13,
+            "time": "2026-11-08T06:00:00.042332Z",
+            "name": "pool-0-thread-12",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 14,
+            "time": "2026-11-08T06:00:00.473442Z",
+            "name": "pool-0-thread-13",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 15,
+            "time": "2026-11-08T06:00:00.349904Z",
+            "name": "pool-0-thread-14",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 16,
+            "time": "2026-11-08T06:00:00.945481Z",
+            "name": "pool-0-thread-15",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 17,
+            "time": "2026-11-08T06:00:00.539030Z",
+            "name": "pool-0-thread-16",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 18,
+            "time": "2026-11-08T06:00:00.325342Z",
+            "name": "pool-0-thread-17",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 19,
+            "time": "2026-11-08T06:00:00.195866Z",
+            "name": "pool-0-thread-18",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@17cb5ccc",
+            "stack": [
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 20,
+            "time": "2026-11-08T06:00:00.680378Z",
+            "name": "pool-0-thread-19",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@e78d61eb",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 21,
+            "time": "2026-11-08T06:00:00.643731Z",
+            "name": "pool-0-thread-20",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@ddcae127",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 22,
+            "time": "2026-11-08T06:00:00.595987Z",
+            "name": "pool-0-thread-21",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 23,
+            "time": "2026-11-08T06:00:00.551486Z",
+            "name": "pool-0-thread-22",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@6f58766d",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 24,
+            "time": "2026-11-08T06:00:00.280245Z",
+            "name": "pool-0-thread-23",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 25,
+            "time": "2026-11-08T06:00:00.177131Z",
+            "name": "pool-0-thread-24",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 26,
+            "time": "2026-11-08T06:00:00.641294Z",
+            "name": "pool-0-thread-25",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@dce20b69",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 27,
+            "time": "2026-11-08T06:00:00.065842Z",
+            "name": "pool-0-thread-26",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@6ecba8df",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 28,
+            "time": "2026-11-08T06:00:00.477882Z",
+            "name": "pool-0-thread-27",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@2600556b",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 29,
+            "time": "2026-11-08T06:00:00.577134Z",
+            "name": "pool-0-thread-28",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@b85a1730",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 30,
+            "time": "2026-11-08T06:00:00.581613Z",
+            "name": "pool-0-thread-29",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 31,
+            "time": "2026-11-08T06:00:00.560302Z",
+            "name": "pool-0-thread-30",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 32,
+            "time": "2026-11-08T06:00:00.625386Z",
+            "name": "pool-0-thread-31",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@e017165",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 33,
+            "time": "2026-11-08T06:00:00.020956Z",
+            "name": "pool-0-thread-32",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@5481e403",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 34,
+            "time": "2026-11-08T06:00:00.661164Z",
+            "name": "pool-0-thread-33",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@437f1714",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 35,
+            "time": "2026-11-08T06:00:00.160894Z",
+            "name": "pool-0-thread-34",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@97322a09",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 36,
+            "time": "2026-11-08T06:00:00.561887Z",
+            "name": "pool-0-thread-35",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@a3f5d203",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 37,
+            "time": "2026-11-08T06:00:00.325055Z",
+            "name": "pool-0-thread-36",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 38,
+            "time": "2026-11-08T06:00:00.513833Z",
+            "name": "pool-0-thread-37",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@770f2b82",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 39,
+            "time": "2026-11-08T06:00:00.133613Z",
+            "name": "pool-0-thread-38",
+            "state": "RUNNABLE",
+            "stack": [
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 40,
+            "time": "2026-11-08T06:00:00.932974Z",
+            "name": "pool-0-thread-39",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@56c63f3f",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          }
+        ],
+        "threadCount": 40
+      },
+      {
+        "container": "java.util.concurrent.ThreadPoolExecutor@1936a587",
+        "parent": "<root>",
+        "owner": null,
+        "threads": [
+          {
+            "tid": 41,
+            "time": "2026-11-08T06:00:00.675100Z",
+            "name": "pool-1-thread-0",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@db8dc7c",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 42,
+            "time": "2026-11-08T06:00:00.153678Z",
+            "name": "pool-1-thread-1",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 43,
+            "time": "2026-11-08T06:00:00.937638Z",
+            "name": "pool-1-thread-2",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 44,
+            "time": "2026-11-08T06:00:00.585746Z",
+            "name": "pool-1-thread-3",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 45,
+            "time": "2026-11-08T06:00:00.163757Z",
+            "name": "pool-1-thread-4",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@f2e46f22",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 46,
+            "time": "2026-11-08T06:00:00.766716Z",
+            "name": "pool-1-thread-5",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@9701b6ed",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 47,
+            "time": "2026-11-08T06:00:00.814016Z",
+            "name": "pool-1-thread-6",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@8992a603",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 48,
+            "time": "2026-11-08T06:00:00.676778Z",
+            "name": "pool-1-thread-7",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 49,
+            "time": "2026-11-08T06:00:00.109875Z",
+            "name": "pool-1-thread-8",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@75d98525",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 50,
+            "time": "2026-11-08T06:00:00.844664Z",
+            "name": "pool-1-thread-9",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 51,
+            "time": "2026-11-08T06:00:00.023310Z",
+            "name": "pool-1-thread-10",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 52,
+            "time": "2026-11-08T06:00:00.292492Z",
+            "name": "pool-1-thread-11",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 53,
+            "time": "2026-11-08T06:00:00.183611Z",
+            "name": "pool-1-thread-12",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 54,
+            "time": "2026-11-08T06:00:00.005889Z",
+            "name": "pool-1-thread-13",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 55,
+            "time": "2026-11-08T06:00:00.390516Z",
+            "name": "pool-1-thread-14",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@2deee42c",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 56,
+            "time": "2026-11-08T06:00:00.126443Z",
+            "name": "pool-1-thread-15",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@d1268df0",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 57,
+            "time": "2026-11-08T06:00:00.733259Z",
+            "name": "pool-1-thread-16",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@3aef2cab",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 58,
+            "time": "2026-11-08T06:00:00.567629Z",
+            "name": "pool-1-thread-17",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 59,
+            "time": "2026-11-08T06:00:00.010199Z",
+            "name": "pool-1-thread-18",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 60,
+            "time": "2026-11-08T06:00:00.610078Z",
+            "name": "pool-1-thread-19",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 61,
+            "time": "2026-11-08T06:00:00.551233Z",
+            "name": "pool-1-thread-20",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@60aa7a9",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 62,
+            "time": "2026-11-08T06:00:00.442221Z",
+            "name": "pool-1-thread-21",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@ae44d54e",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 63,
+            "time": "2026-11-08T06:00:00.556190Z",
+            "name": "pool-1-thread-22",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 64,
+            "time": "2026-11-08T06:00:00.706186Z",
+            "name": "pool-1-thread-23",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@fa149320",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 65,
+            "time": "2026-11-08T06:00:00.863113Z",
+            "name": "pool-1-thread-24",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 66,
+            "time": "2026-11-08T06:00:00.797218Z",
+            "name": "pool-1-thread-25",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@ef454a62",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 67,
+            "time": "2026-11-08T06:00:00.124409Z",
+            "name": "pool-1-thread-26",
+            "state": "RUNNABLE",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 68,
+            "time": "2026-11-08T06:00:00.011544Z",
+            "name": "pool-1-thread-27",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 69,
+            "time": "2026-11-08T06:00:00.641613Z",
+            "name": "pool-1-thread-28",
+            "state": "RUNNABLE",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 70,
+            "time": "2026-11-08T06:00:00.498549Z",
+            "name": "pool-1-thread-29",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 71,
+            "time": "2026-11-08T06:00:00.301539Z",
+            "name": "pool-1-thread-30",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@68ed51d8",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 72,
+            "time": "2026-11-08T06:00:00.463339Z",
+            "name": "pool-1-thread-31",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 73,
+            "time": "2026-11-08T06:00:00.787536Z",
+            "name": "pool-1-thread-32",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@a22d3b75",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 74,
+            "time": "2026-11-08T06:00:00.074169Z",
+            "name": "pool-1-thread-33",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@6be3a185",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 75,
+            "time": "2026-11-08T06:00:00.718606Z",
+            "name": "pool-1-thread-34",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 76,
+            "time": "2026-11-08T06:00:00.188226Z",
+            "name": "pool-1-thread-35",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 77,
+            "time": "2026-11-08T06:00:00.200121Z",
+            "name": "pool-1-thread-36",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 78,
+            "time": "2026-11-08T06:00:00.650601Z",
+            "name": "pool-1-thread-37",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 79,
+            "time": "2026-11-08T06:00:00.854328Z",
+            "name": "pool-1-thread-38",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@f73e9407",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 80,
+            "time": "2026-11-08T06:00:00.595992Z",
+            "name": "pool-1-thread-39",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          }
+        ],
+        "threadCount": 40
+      },
+      {
+        "container": "java.util.concurrent.ThreadPoolExecutor@1936a588",
+        "parent": "<root>",
+        "owner": null,
+        "threads": [
+          {
+            "tid": 81,
+            "time": "2026-11-08T06:00:00.140850Z",
+            "name": "pool-2-thread-0",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 82,
+            "time": "2026-11-08T06:00:00.197697Z",
+            "name": "pool-2-thread-1",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 83,
+            "time": "2026-11-08T06:00:00.297606Z",
+            "name": "pool-2-thread-2",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 84,
+            "time": "2026-11-08T06:00:00.637478Z",
+            "name": "pool-2-thread-3",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 85,
+            "time": "2026-11-08T06:00:00.714399Z",
+            "name": "pool-2-thread-4",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 86,
+            "time": "2026-11-08T06:00:00.371398Z",
+            "name": "pool-2-thread-5",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 87,
+            "time": "2026-11-08T06:00:00.718370Z",
+            "name": "pool-2-thread-6",
+            "state": "BLOCKED",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 88,
+            "time": "2026-11-08T06:00:00.779361Z",
+            "name": "pool-2-thread-7",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@d62704c0",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 89,
+            "time": "2026-11-08T06:00:00.394060Z",
+            "name": "pool-2-thread-8",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@64d261e4",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 90,
+            "time": "2026-11-08T06:00:00.780384Z",
+            "name": "pool-2-thread-9",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@362e8166",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 91,
+            "time": "2026-11-08T06:00:00.039290Z",
+            "name": "pool-2-thread-10",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 92,
+            "time": "2026-11-08T06:00:00.985197Z",
+            "name": "pool-2-thread-11",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@845196f9",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 93,
+            "time": "2026-11-08T06:00:00.324328Z",
+            "name": "pool-2-thread-12",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 94,
+            "time": "2026-11-08T06:00:00.099361Z",
+            "name": "pool-2-thread-13",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 95,
+            "time": "2026-11-08T06:00:00.848373Z",
+            "name": "pool-2-thread-14",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 96,
+            "time": "2026-11-08T06:00:00.952708Z",
+            "name": "pool-2-thread-15",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@c29ada1c",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 97,
+            "time": "2026-11-08T06:00:00.657556Z",
+            "name": "pool-2-thread-16",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 98,
+            "time": "2026-11-08T06:00:00.518969Z",
+            "name": "pool-2-thread-17",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 99,
+            "time": "2026-11-08T06:00:00.630004Z",
+            "name": "pool-2-thread-18",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@f70a5bc0",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 100,
+            "time": "2026-11-08T06:00:00.193445Z",
+            "name": "pool-2-thread-19",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@9cb2ac4b",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 101,
+            "time": "2026-11-08T06:00:00.489220Z",
+            "name": "pool-2-thread-20",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 102,
+            "time": "2026-11-08T06:00:00.022268Z",
+            "name": "pool-2-thread-21",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@db0b5a40",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 103,
+            "time": "2026-11-08T06:00:00.169818Z",
+            "name": "pool-2-thread-22",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@4d4322e3",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 104,
+            "time": "2026-11-08T06:00:00.552849Z",
+            "name": "pool-2-thread-23",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@86a50085",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 105,
+            "time": "2026-11-08T06:00:00.682088Z",
+            "name": "pool-2-thread-24",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@a9b9bd2b",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 106,
+            "time": "2026-11-08T06:00:00.566316Z",
+            "name": "pool-2-thread-25",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@7c308305",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 107,
+            "time": "2026-11-08T06:00:00.434303Z",
+            "name": "pool-2-thread-26",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 108,
+            "time": "2026-11-08T06:00:00.965579Z",
+            "name": "pool-2-thread-27",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 109,
+            "time": "2026-11-08T06:00:00.626695Z",
+            "name": "pool-2-thread-28",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 110,
+            "time": "2026-11-08T06:00:00.213820Z",
+            "name": "pool-2-thread-29",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@60d1fa4f",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 111,
+            "time": "2026-11-08T06:00:00.602353Z",
+            "name": "pool-2-thread-30",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@d036db87",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 112,
+            "time": "2026-11-08T06:00:00.167792Z",
+            "name": "pool-2-thread-31",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 113,
+            "time": "2026-11-08T06:00:00.573507Z",
+            "name": "pool-2-thread-32",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 114,
+            "time": "2026-11-08T06:00:00.174304Z",
+            "name": "pool-2-thread-33",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@56b8953c",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 115,
+            "time": "2026-11-08T06:00:00.676466Z",
+            "name": "pool-2-thread-34",
+            "state": "RUNNABLE",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 116,
+            "time": "2026-11-08T06:00:00.618801Z",
+            "name": "pool-2-thread-35",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@1fd23a37",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 117,
+            "time": "2026-11-08T06:00:00.025352Z",
+            "name": "pool-2-thread-36",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 118,
+            "time": "2026-11-08T06:00:00.632018Z",
+            "name": "pool-2-thread-37",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@6de3fef5",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 119,
+            "time": "2026-11-08T06:00:00.658323Z",
+            "name": "pool-2-thread-38",
+            "state": "WAITING",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 120,
+            "time": "2026-11-08T06:00:00.579382Z",
+            "name": "pool-2-thread-39",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@f2ce4c4c",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          }
+        ],
+        "threadCount": 40
+      },
+      {
+        "container": "java.util.concurrent.ThreadPoolExecutor@1936a589",
+        "parent": "<root>",
+        "owner": null,
+        "threads": [
+          {
+            "tid": 121,
+            "time": "2026-11-08T06:00:00.618221Z",
+            "name": "pool-3-thread-0",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 122,
+            "time": "2026-11-08T06:00:00.814010Z",
+            "name": "pool-3-thread-1",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 123,
+            "time": "2026-11-08T06:00:00.916747Z",
+            "name": "pool-3-thread-2",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 124,
+            "time": "2026-11-08T06:00:00.153118Z",
+            "name": "pool-3-thread-3",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@af07d7bb",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 125,
+            "time": "2026-11-08T06:00:00.166959Z",
+            "name": "pool-3-thread-4",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 126,
+            "time": "2026-11-08T06:00:00.207997Z",
+            "name": "pool-3-thread-5",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 127,
+            "time": "2026-11-08T06:00:00.484997Z",
+            "name": "pool-3-thread-6",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@40fb9a7a",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 128,
+            "time": "2026-11-08T06:00:00.930511Z",
+            "name": "pool-3-thread-7",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@75ed7c27",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)"
+            ]
+          },
+          {
+            "tid": 129,
+            "time": "2026-11-08T06:00:00.163147Z",
+            "name": "pool-3-thread-8",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@4fd4b7fc",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 130,
+            "time": "2026-11-08T06:00:00.712023Z",
+            "name": "pool-3-thread-9",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 131,
+            "time": "2026-11-08T06:00:00.138269Z",
+            "name": "pool-3-thread-10",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 132,
+            "time": "2026-11-08T06:00:00.720749Z",
+            "name": "pool-3-thread-11",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 133,
+            "time": "2026-11-08T06:00:00.399484Z",
+            "name": "pool-3-thread-12",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@e85ea8e8",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 134,
+            "time": "2026-11-08T06:00:00.224488Z",
+            "name": "pool-3-thread-13",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@520e6e73",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 135,
+            "time": "2026-11-08T06:00:00.844077Z",
+            "name": "pool-3-thread-14",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 136,
+            "time": "2026-11-08T06:00:00.230009Z",
+            "name": "pool-3-thread-15",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 137,
+            "time": "2026-11-08T06:00:00.739868Z",
+            "name": "pool-3-thread-16",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@989ac672",
+            "stack": [
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 138,
+            "time": "2026-11-08T06:00:00.761469Z",
+            "name": "pool-3-thread-17",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@df11de6a",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 139,
+            "time": "2026-11-08T06:00:00.567177Z",
+            "name": "pool-3-thread-18",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 140,
+            "time": "2026-11-08T06:00:00.269132Z",
+            "name": "pool-3-thread-19",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 141,
+            "time": "2026-11-08T06:00:00.292052Z",
+            "name": "pool-3-thread-20",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@22e9c712",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 142,
+            "time": "2026-11-08T06:00:00.534921Z",
+            "name": "pool-3-thread-21",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@a83e72ef",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 143,
+            "time": "2026-11-08T06:00:00.456217Z",
+            "name": "pool-3-thread-22",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "shop.order.OrderController.create(OrderController.java:42)"
+            ]
+          },
+          {
+            "tid": 144,
+            "time": "2026-11-08T06:00:00.906725Z",
+            "name": "pool-3-thread-23",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@6095772d",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 145,
+            "time": "2026-11-08T06:00:00.067218Z",
+            "name": "pool-3-thread-24",
+            "state": "BLOCKED",
+            "stack": [
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 146,
+            "time": "2026-11-08T06:00:00.116065Z",
+            "name": "pool-3-thread-25",
+            "state": "WAITING",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 147,
+            "time": "2026-11-08T06:00:00.920744Z",
+            "name": "pool-3-thread-26",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@6e174f7d",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)"
+            ]
+          },
+          {
+            "tid": 148,
+            "time": "2026-11-08T06:00:00.634760Z",
+            "name": "pool-3-thread-27",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 149,
+            "time": "2026-11-08T06:00:00.578798Z",
+            "name": "pool-3-thread-28",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 150,
+            "time": "2026-11-08T06:00:00.529588Z",
+            "name": "pool-3-thread-29",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)"
+            ]
+          },
+          {
+            "tid": 151,
+            "time": "2026-11-08T06:00:00.796938Z",
+            "name": "pool-3-thread-30",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 152,
+            "time": "2026-11-08T06:00:00.967241Z",
+            "name": "pool-3-thread-31",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          },
+          {
+            "tid": 153,
+            "time": "2026-11-08T06:00:00.134630Z",
+            "name": "pool-3-thread-32",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@dcc102e1",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "shop.order.OrderService.place(OrderService.java:118)"
+            ]
+          },
+          {
+            "tid": 154,
+            "time": "2026-11-08T06:00:00.869999Z",
+            "name": "pool-3-thread-33",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 155,
+            "time": "2026-11-08T06:00:00.937481Z",
+            "name": "pool-3-thread-34",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.Object@c5e76e9f",
+            "stack": [
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)"
+            ]
+          },
+          {
+            "tid": 156,
+            "time": "2026-11-08T06:00:00.705000Z",
+            "name": "pool-3-thread-35",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)"
+            ]
+          },
+          {
+            "tid": 157,
+            "time": "2026-11-08T06:00:00.269304Z",
+            "name": "pool-3-thread-36",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 158,
+            "time": "2026-11-08T06:00:00.866713Z",
+            "name": "pool-3-thread-37",
+            "state": "WAITING",
+            "waitingOn": "java.lang.Object@73e4529d",
+            "stack": [
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "shop.order.OrderController.create(OrderController.java:42)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)",
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)"
+            ]
+          },
+          {
+            "tid": 159,
+            "time": "2026-11-08T06:00:00.297623Z",
+            "name": "pool-3-thread-38",
+            "state": "BLOCKED",
+            "waitingOn": "java.lang.Object@4dd6dd9",
+            "stack": [
+              "java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "java.base/java.lang.Object.wait0(Native Method)"
+            ]
+          },
+          {
+            "tid": 160,
+            "time": "2026-11-08T06:00:00.576405Z",
+            "name": "pool-3-thread-39",
+            "state": "BLOCKED",
+            "stack": [
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait(Object.java:389)",
+              "java.base/java.lang.Object.wait0(Native Method)",
+              "java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)",
+              "java.base/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base/java.lang.Thread.run(Thread.java:1474)",
+              "shop.order.OrderService.place(OrderService.java:118)",
+              "java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)"
+            ]
+          }
+        ],
+        "threadCount": 40
+      }
+    ]
+  }
+}
