@@ -98,8 +98,16 @@ public final class DataGen {
                   .append("            \"time\": \"2026-11-08T06:00:00.").append(String.format(Locale.ROOT, "%06d", rnd.nextInt(1_000_000))).append("Z\",\n")
                   .append("            \"name\": \"").append(root && t == 0 ? "main" : "pool-" + c + "-thread-" + t).append("\",\n")
                   .append("            \"state\": \"").append(state).append("\",\n");
-                if (!state.equals("RUNNABLE") && rnd.nextBoolean()) {
-                    sb.append("            \"waitingOn\": \"java.lang.Object@").append(Integer.toHexString(rnd.nextInt())).append("\",\n");
+                // as in a real JDK dump: waitingOn only for threads in Object.wait(),
+                // blockedOn for BLOCKED; sleeping and parked threads have neither
+                String monitorField = switch (state) {
+                    case "WAITING", "TIMED_WAITING" -> "waitingOn";
+                    case "BLOCKED" -> "blockedOn";
+                    default -> null;
+                };
+                if (monitorField != null && rnd.nextBoolean()) {
+                    sb.append("            \"").append(monitorField).append("\": \"java.lang.Object@")
+                      .append(Integer.toHexString(rnd.nextInt())).append("\",\n");
                 }
                 sb.append("            \"stack\": [\n");
                 int depth = 3 + rnd.nextInt(8);

@@ -18,7 +18,7 @@ public interface JsonTasks {
     /** Number of threads per state over all thread containers. */
     Map<String, Long> threadsByState(String threadDump);
 
-    /** Threads that have the optional waitingOn member, whatever their state. */
+    /** Threads that have the optional waitingOn member (only WAITING and TIMED_WAITING threads in Object.wait()). */
     long threadsWithWaitingOn(String threadDump);
 
     /** Containers whose parent is JSON null. */

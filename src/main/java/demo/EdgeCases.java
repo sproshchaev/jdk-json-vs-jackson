@@ -9,7 +9,10 @@ import jdk.incubator.json.Json;
 import jdk.incubator.json.JsonObject;
 import jdk.incubator.json.JsonString;
 import jdk.incubator.json.JsonValue;
+import tools.jackson.core.StreamReadFeature;
 import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.cfg.JsonNodeFeature;
+import tools.jackson.databind.json.JsonMapper;
 import tools.jackson.databind.node.ObjectNode;
 
 /**
@@ -19,12 +22,14 @@ import tools.jackson.databind.node.ObjectNode;
 public final class EdgeCases {
 
     private static final String ROW = "%-30s | %-34s | %s%n";
+    private static final String DUPLICATE_KEY = "{\"a\":1,\"a\":2}";
+    private static final String LONG_FRACTION = "{\"x\":0.1000000000000000055511151231257827}";
 
     record Case(String name, String json, Function<JsonValue, Object> jdk, Function<JsonNode, Object> jackson) {}
 
     public static void main(String[] args) {
         List<Case> cases = List.of(
-                new Case("duplicate key", "{\"a\":1,\"a\":2}",
+                new Case("duplicate key", DUPLICATE_KEY,
                         v -> v.get("a").asInt(), n -> n.get("a").asInt()),
                 new Case("trailing comma", "[1,2,]",
                         v -> v.asList().size(), n -> n.size()),
@@ -52,7 +57,7 @@ public final class EdgeCases {
                         v -> v.get("n").asInt(), n -> n.get("n").asInt()),
                 new Case("\"42\" read as int", "{\"n\":\"42\"}",
                         v -> v.get("n").asInt(), n -> n.get("n").asInt()),
-                new Case("long fraction written back", "{\"x\":0.1000000000000000055511151231257827}",
+                new Case("long fraction written back", LONG_FRACTION,
                         v -> v.get("x").toString(), n -> n.get("x").toString()),
                 new Case("1e400 read as double", "{\"x\":1e400}",
                         v -> v.get("x").asDouble(), n -> n.get("x").asDouble()),
@@ -87,6 +92,21 @@ public final class EdgeCases {
         accessors("missing: asInt / intValue", "{}", JsonNode::asInt, JsonNode::intValue);
         accessors("null: asString / stringValue", "{\"n\":null}", JsonNode::asString, JsonNode::stringValue);
         accessors("1e400: asDouble / doubleValue", "{\"n\":1e400}", JsonNode::asDouble, JsonNode::doubleValue);
+
+        // the two options that switch the tree to the stricter behaviour
+        System.out.println();
+        System.out.println("== Jackson 3 tree: default vs option ==");
+        System.out.printf(ROW, "case", "default", "option on");
+        JsonMapper strictDuplicates = JsonMapper.builder()
+                .enable(StreamReadFeature.STRICT_DUPLICATE_DETECTION).build();
+        JsonMapper bigDecimals = JsonMapper.builder()
+                .enable(JsonNodeFeature.USE_BIG_DECIMAL_FOR_FLOATS).build();
+        System.out.printf(ROW, "duplicate key, STRICT_DUPL..",
+                outcome(() -> JacksonTreeTasks.MAPPER.readTree(DUPLICATE_KEY).get("a")),
+                outcome(() -> strictDuplicates.readTree(DUPLICATE_KEY).get("a")));
+        System.out.printf(ROW, "fraction, USE_BIG_DECIMAL..",
+                outcome(() -> JacksonTreeTasks.MAPPER.readTree(LONG_FRACTION).get("x")),
+                outcome(() -> bigDecimals.readTree(LONG_FRACTION).get("x")));
 
         System.out.println();
         System.out.println("== writing ==");

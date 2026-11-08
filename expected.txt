@@ -7,9 +7,9 @@ unknownPrecipitation     jackson-binding  3
 threadsByState           jdk              {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
 threadsByState           jackson-tree     {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
 threadsByState           jackson-binding  {BLOCKED=31, RUNNABLE=32, TIMED_WAITING=53, WAITING=44}
-threadsWithWaitingOn     jdk              68
-threadsWithWaitingOn     jackson-tree     68
-threadsWithWaitingOn     jackson-binding  68
+threadsWithWaitingOn     jdk              53
+threadsWithWaitingOn     jackson-tree     53
+threadsWithWaitingOn     jackson-binding  53
 rootContainers           jdk              1
 rootContainers           jackson-tree     1
 rootContainers           jackson-binding  1
@@ -51,6 +51,11 @@ case                           | as*()                              | *Value()
 missing: asInt / intValue      | OK 0                               | ERR JsonNodeException
 null: asString / stringValue   | OK ""                              | OK null
 1e400: asDouble / doubleValue  | OK Infinity                        | OK Infinity
+
+== Jackson 3 tree: default vs option ==
+case                           | default                            | option on
+duplicate key, STRICT_DUPL..   | OK 2                               | ERR StreamReadException
+fraction, USE_BIG_DECIMAL..    | OK 0.1                             | OK 0.1000000000000000055511151231257827
 
 == writing ==
 JDK     string: "quote \" slash / newline \n tag </script> u2028   emoji 😀"
